@@ -53,19 +53,13 @@
 
 
     }
-       { (font -family: Arial, Helvetica, sans-serial)
+    body
+       { font-family: Arial, Helvetica, sans-serial
 
        }
-        {
-          background-color: black;
-      }
+        
 
       
-
-      * {
-        box-sizing: border-box;
-      }
-
       /* Add padding to containers */
       .container {
         padding: 16px;
@@ -206,6 +200,7 @@
     }));
 
     app.post('/sign_up', function (req, res) {
+    
       var name = req.body.name;
       var email = req.body.email;
       var pass = req.body.password;
@@ -217,7 +212,10 @@
         "password": pass,
         "phone": phone
       }
-      db.collection('Email').insertOne(data, function (err, collection) {
+    }
+  
+  <script>
+    db.collection('Email').insertOne(data, function (err, collection) {
         insertOne(data, function (err, collection) {
           if (err) throw err;
           console.log("Record inserted Successfully");
@@ -227,6 +225,7 @@
         return res.redirect('signup_success.html');
         return res.redirect('login_success.html');
       })
+      </script>
 
 
       app.get('/', function (req, res) {
