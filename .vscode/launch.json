@@ -23,13 +23,9 @@
             "port": 9222,
             "request": "attach",
             "type": "chrome",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${file}"
         },
-        {
-            "type": "pwa-chrome",
-            "request": "launch",
-            "name": "Open Online Library.html",
-            "file": "c:\\Users\\user\\Desktop\\CSS\\Online Library.html"
-        }
+        
+            
     ]
 }
